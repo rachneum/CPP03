@@ -6,15 +6,15 @@
 
 class	ClapTrap
 {
-	private:
-		std::string	_Name;
-		int			HitPoints = 10;//Points de vie.
-		int			EnergyPoints = 10;//Endurance.
-		int			AttackDam = 0;//Pouvoir de degat.
+	protected:
+		std::string	_name;
+		int			hitPoints;
+		int			energyPoints;
+		int			attackDam;
 	public:
 		ClapTrap();
-		ClapTrap(const std::string	Name);
-		ClapTrap(const ClapTrap& other);//Constructeur de copy.
+		ClapTrap(const std::string name);
+		ClapTrap(const ClapTrap& other);
 		ClapTrap& operator=(const ClapTrap& rhs);
 		~ClapTrap();
 		std::string	getName() const;
