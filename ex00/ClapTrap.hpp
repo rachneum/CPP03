@@ -11,10 +11,11 @@ class	ClapTrap
 		int			_hitPoints;//Points de vie.
 		int			_energyPoints;//Endurance.
 		int			_attackDamage;//Pouvoir de degat.
+
 	public:
 		ClapTrap();
 		ClapTrap(const std::string	Name);
-		ClapTrap(const ClapTrap& other);//Constructeur de copy.
+		ClapTrap(const ClapTrap& other);
 		ClapTrap& operator=(const ClapTrap& rhs);
 		~ClapTrap();
 		std::string	getName() const;
