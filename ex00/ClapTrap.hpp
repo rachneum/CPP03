@@ -7,10 +7,10 @@
 class	ClapTrap
 {
 	private:
-		std::string	_Name;
-		int			HitPoints = 10;//Points de vie.
-		int			EnergyPoints = 10;//Endurance.
-		int			AttackDam = 0;//Pouvoir de degat.
+		std::string	_name;
+		int			_hitPoints;//Points de vie.
+		int			_energyPoints;//Endurance.
+		int			_attackDamage;//Pouvoir de degat.
 	public:
 		ClapTrap();
 		ClapTrap(const std::string	Name);

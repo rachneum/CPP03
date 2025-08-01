@@ -2,17 +2,17 @@
 
 ScavTrap::ScavTrap() : ClapTrap()//Appeler le constructeur de base sinon les membres herites ne seront pas initialses correctement.
 {//(en gros, je lui dit de construire ClapTrap avant de construire ScavTrap).
-	hitPoints = 100;
-    energyPoints = 50;
-    attackDam = 20;
+	_hitPoints = 100;
+    _energyPoints = 50;
+    _attackDamage = 20;
 	std::cout << "ScavTrap contructor called." << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 {
-	hitPoints = 100;
-    energyPoints = 50;
-    attackDam = 20;
+	_hitPoints = 100;
+    _energyPoints = 50;
+    _attackDamage = 20;
 	std::cout << "ScavTrap constructor Name called." << std::endl;
 }
 
@@ -36,13 +36,13 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::attack(const std::string& target)
 {
-	if ((hitPoints > 0) && (energyPoints > 0))
+	if ((_hitPoints > 0) && (_energyPoints > 0))
 	{
-		energyPoints--;
-		std::cout << "ScavTrap " << getName() << " attacks " << target << ", causing " << attackDam << " points of damage!" << std::endl;
+		_energyPoints--;
+		std::cout << "ScavTrap " << getName() << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
 	}
 	else
-		std::cout << "ScavTrap" << getName() << " doesn't have enough HitPoints or/and EnergyPoints to attack!" << std::endl;
+		std::cout << "ScavTrap " << getName() << " doesn't have enough HitPoints or/and EnergyPoints to attack!" << std::endl;
 }
 
 void	ScavTrap::guardGate()

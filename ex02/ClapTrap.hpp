@@ -8,9 +8,9 @@ class	ClapTrap
 {
 	protected:
 		std::string	_name;
-		int			hitPoints;
-		int			energyPoints;
-		int			attackDam;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
 	public:
 		ClapTrap();
 		ClapTrap(const std::string name);
